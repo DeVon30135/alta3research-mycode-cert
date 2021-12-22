@@ -7,6 +7,7 @@ url = "http://www.boredapi.com/api/activity"
 # List of types can be found in the Bored API documentation: https://www.boredapi.com/documentation
 types = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork", "anything"]
 
+# Method for generating string for GET parameters
 def generate_params(type, participants):
     params = ""
     # Adds or doesn't add parameters based on user input
@@ -31,7 +32,8 @@ def simplify_activity(activity):
             activity['price'] = "slightly pricey"
         else:
             activity['price'] = "relatively cheap"
-    # According to Bored API, the accessibility is represented by "A factor describing how possible an event is to do with zero being the most accessible.
+            
+    # According to Bored API, the accessibility is represented by "A factor describing how possible an event is to do with zero being the most accessible."
     if activity['accessibility'] == 0:
         activity['accessibility'] = "incredibly"
     elif activity['accessibility'] == 1:
