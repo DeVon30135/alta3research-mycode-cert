@@ -7,7 +7,7 @@ import yaml
 app = Flask(__name__)
 # Loads animal info from yaml file
 with open("foodimals.yml", "r") as info:
-        bestiary = yaml.safe_load(info)
+        bestiary = yaml.safe_load(info)[0]
 
 @app.route("/")
 @app.route("/start")
@@ -32,8 +32,8 @@ def fuse():
         combination = animal + "-" + food
         print(combination)
         # Check if GET arguments have a valid animal
-        if combination in bestiary[0]:
-            beast = bestiary[0][combination]
+        if combination in bestiary:
+            beast = bestiary[combination]
             # Returns animal name and link to see the full bio
             return f"Your animal fusion is {beast['name']}! More info can be found here: {request.url_root}foodimal/{combination}"
         else:
@@ -50,7 +50,7 @@ def fuse():
 
 @app.route("/foodimal/<fusion>")
 def foodimal(fusion):
-    beast = bestiary[0][fusion]
+    beast = bestiary[fusion]
     # Return results rendered to template. The template handles loading items within the dictionary
     return render_template("fusion_result.html", foodimal = beast)
 
