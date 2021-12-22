@@ -1,9 +1,0 @@
----
-- scorpion-cake:
-        - name: "Cakepion"
-        - bio: "It sting and it sweet"
-  scorpion-pineapple:
-        - name: "Test"
-        - bio: "Test"
-
-...
