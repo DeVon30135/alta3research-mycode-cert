@@ -21,7 +21,7 @@
         image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/octopus-hotdog.png"
   octopus-pineapple:
         name: "Pineapus"
-        bio: ""
+        bio: "The pineapus is typically found in the oceans near Latin America. It's tough skin helps deter predators. When threatened it ejects a pineapple juice concentrate as a sweet destraction to aid in its escape."
         image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/octopus-pineapple.png"
   deer-cake:
         name: "Happy Deerday!"
@@ -29,11 +29,11 @@
         image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-cake.png"
   deer-hotdog:
         name: "Hotdeer"
-        bio: ""
+        bio: "A counterpart of it's red-nosed cousin who lives in the North Pole, the hotdeer lives on various islands directly along the equator. The condiments found on their back can differ from island to island."
         image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-hotdog.png"
   deer-pineapple:
         name: "Carmen Deeranda"
-        bio: ""
+        bio: "A world renown deer famous for being a samba singer, dancer, Broadway actress and film star who was active from the 1930s onwards."
         image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-pineapple.png"
 
 ...
