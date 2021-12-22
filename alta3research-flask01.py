@@ -1,8 +1,13 @@
 #!/usr/bin/python3
+# Images are generated from Emoji Kitchen made by Google. More info on Emoji kitchen can be found here: https://blog.google/products/android/emoji-kitchen-new-mashups-mixing-experience/
+
 from flask import Flask, redirect, url_for, request, render_template
 import yaml
 
 app = Flask(__name__)
+# Loads animal info from yaml file
+with open("foodimals.yml", "r") as info:
+        bestiary = yaml.load(info)
 
 @app.route("/")
 @app.route("/start")
@@ -15,23 +20,39 @@ def fuse():
     #Parse input data and redirect to frutimal
     if request.method == "POST":
         animal = request.form.get("animal")
-        fruit = request.form.get("fruit")
+        food = request.form.get("food")
         # Combination will look like "octopus-pineapple"
-        combination = animal + "-" + fruit
+        combination = animal + "-" + food
         print(combination)
-        return redirect(url_for("fruitimal", fusion = combination))
+        return redirect(url_for("foodimal", fusion = combination))
 
     elif request.method == "GET":
-        return "WOW"
+        animal = request.args.get("animal").lower()
+        food = request.args.get("food").lower()
+        combination = animal + "-" + food
+        print(combination)
+        # Check if GET arguments have a valid animal
+        if combination in bestiary[0]:
+            beast = bestiary[0][combination]
+            # Returns animal name and link to see the full bio
+            return f"Your animal fusion is {beast['name']}! More info can be found here: {request.url_root}foodimal/{combination}"
+        else:
+            return f"""The animal {combination} doesn't exist in our findings.
+                    The available animals are:
+                    - Deer
+                    - Octopus
+                    - Scorpion
 
-@app.route("/fruitimal/<fusion>")
-def fruitimal(fusion):
-    #Load animal info from yaml
-    with open("fruitimals.yml", "r") as info:
-        bestiary = yaml.load(info)
+                    The available foods are:
+                    - Cake
+                    - Hotdog
+                    - Pineapple"""
+
+@app.route("/foodimal/<fusion>")
+def foodimal(fusion):
     beast = bestiary[0][fusion]
-    #Return results rendered to template. The template handles loading items within the dictionary
-    return render_template("fusion_result.html", fruitimal = beast)
+    # Return results rendered to template. The template handles loading items within the dictionary
+    return render_template("fusion_result.html", foodimal = beast)
 
 if __name__ == "__main__":
    app.run(host="0.0.0.0", port=2224) # runs the application

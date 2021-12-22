@@ -1,0 +1,41 @@
+# Info and image URL for each animal fusion handled in alta3research-flask01.py
+
+---
+- scorpion-cake:
+        name: "Cakepion"
+        bio: "The sweet Cakepion resides in 2 sticks of butter, 3 cups of all-purpose flower, 1tbsp of baking soda, 1/2tsp of salt, 1 1/4 cups of sugar, 4 large eggs, 1tbsp vanilla extract, 1 1/4 cups of milk, and 1tbsp of venom. Not safe for human consumption."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/scorpion-cake.png"
+  scorpion-hotdog:
+        name: "Scorpdog"
+        bio: "The Scorpdog can be found in parks and certain back yards where grilling is common place. They aren't aggresive by nature, but are known to become violent when under too many condiments."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/scorpion-hotdog.png"
+  scorpion-pineapple:
+        name: "Scorple"
+        bio: "Scorples are docile herbivores mainly found in the tropical regions of the Southern hemisphere. They have eight legs, a segmented tail, and possess plant matter that acts as a rugged carapace. Scorples are considered an “at-risk” species due to being a common delicacy amongst South Americans and vegans."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/scorpion-pineapple.png"
+  octopus-cake:
+        name: "Caketopus"
+        bio: "A common mullusk found deep in the Sea of Japan. It is known for it's sweet flavor and fluffy texture, making it a delicacy. Pairs well with takoyaki."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/octopus-cake.png"
+  octopus-hotdog:
+        name: "Hoctopus"
+        bio: "The locals consider this creature 'An abomination in a bun.' Hoctopi spend most of their time scavenging for a home to protect their sensetive backs. Unfortunately, this results in the common pilfering of pedestrian's franks for the soft bun it comes with."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/octopus-hotdog.png"
+  octopus-pineapple:
+        name: "Pineapus"
+        bio: "The pineapus is typically found in the oceans near Latin America. It's tough skin helps deter predators. When threatened it ejects a pineapple juice concentrate as a sweet destraction to aid in its escape."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/octopus-pineapple.png"
+  deer-cake:
+        name: "Happy Deerday!"
+        bio: "A Scandinavian holiday that falls upon the Thursday after the Winter solstice.  Happy Deerday is an annual gathering to commemorate the death of Pål Skjønberg, the Deer Whisperer."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-cake.png"
+  deer-hotdog:
+        name: "Hotdeer"
+        bio: "A counterpart of it's red-nosed cousin who lives in the North Pole, the hotdeer lives on various islands directly along the equator. The condiments found on their back can differ from island to island."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-hotdog.png"
+  deer-pineapple:
+        name: "Carmen Deeranda"
+        bio: "A world renown deer famous for being a samba singer, dancer, Broadway actress and film star who was active from the 1930s onwards."
+        image: "https://raw.githubusercontent.com/DeVon30135/alta3research-mycode-cert/main/images/deer-pineapple.png"
+
+...
