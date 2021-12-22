@@ -7,7 +7,7 @@ import yaml
 app = Flask(__name__)
 # Loads animal info from yaml file
 with open("foodimals.yml", "r") as info:
-        bestiary = yaml.load(info)
+        bestiary = yaml.safe_load(info)
 
 @app.route("/")
 @app.route("/start")
