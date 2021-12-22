@@ -7,14 +7,16 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/start")
 def start():
+    # Loads the animal select template
     return render_template("select_fusion.html")
 
 @app.route("/fuse", methods = ["POST", "GET"])
 def fuse():
-    #Parse data and redirect to frutimal
+    #Parse input data and redirect to frutimal
     if request.method == "POST":
         animal = request.form.get("animal")
         fruit = request.form.get("fruit")
+        # Combination will look like "octopus-pineapple"
         combination = animal + "-" + fruit
         print(combination)
         return redirect(url_for("fruitimal", fusion = combination))
@@ -28,8 +30,7 @@ def fruitimal(fusion):
     with open("fruitimals.yml", "r") as info:
         bestiary = yaml.load(info)
     beast = bestiary[0][fusion]
-    print(beast['image'])
-    #Return results rendered to template
+    #Return results rendered to template. The template handles loading items within the dictionary
     return render_template("fusion_result.html", fruitimal = beast)
 
 if __name__ == "__main__":
